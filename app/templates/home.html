@@ -1,1 +1,12 @@
-<h1>Home Page</h1>
+<div class="container">
+    <h1 class="title">Bloc Chat</h1>
+    <div class="sidebar">
+        <h2 class="title">Rooms</h2>
+        <div class="rooms" ng-controller="RoomsCtrl as rooms">
+            <h4 class="room" ng-repeat="room in rooms.roomsArray">{{room.$value}}</h4>
+        </div>
+    </div>
+    <div class="messages">
+        <h2 class="title">Messages</h2>
+    </div>
+</div>
