@@ -1,7 +1,13 @@
 <div class="container">
     <h1 class="title">Bloc Chat</h1>
     <div class="sidebar">
-        <h2 class="title">Rooms</h2>
+        <h2 class="title">Rooms
+            <span ng-controller="ModalCtrl as modal">
+                <button type="button" class="btn btn-primary" ng-click="modal.open()">
+                    New Room
+                </button>
+            </span>
+        </h2>
         <div class="rooms" ng-controller="RoomsCtrl as rooms">
             <h4 class="room" ng-repeat="room in rooms.roomsArray">{{room.$value}}</h4>
         </div>
