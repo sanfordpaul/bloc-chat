@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="HomeCtrl as home">
     <h1 class="title">Bloc Chat</h1>
     <div class="sidebar">
         <h2 class="title">Rooms
@@ -8,11 +8,16 @@
                 </button>
             </span>
         </h2>
-        <div class="rooms" ng-controller="RoomsCtrl as rooms">
-            <h4 class="room" ng-repeat="room in rooms.roomsArray">{{room.$value}}</h4>
+        <div class="rooms">
+            <span class="room"   ng-click="home.roomClicked($event)" ng-repeat="room in home.roomsArray">{{room.$value}}<br></span>
         </div>
     </div>
-    <div class="messages">
-        <h2 class="title">Messages</h2>
+    <div class="message-area">
+        <h2 class="title">Messages for {{home.currentRoom}}</h2>
+        <div class="message" ng-repeat= "message in home.roomMessages">
+            <p class="content">{{message.content}}</p>
+            <span class="time-sent">sent at {{message.timesent}}</span>
+            <span class="username">{{message.username}}</span>
+        </div>
     </div>
 </div>

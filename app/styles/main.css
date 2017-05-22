@@ -7,13 +7,13 @@
 html {
     height: 100%;
     font-size: 100%;
-    
+
 
 }
 
 body {
     font-family: "Open Sans";
-    color: darkgrey;
+    color: black;
     height: 100%;
     min-height: 100%;
     background: #fdffff; /* Old browsers */
@@ -42,7 +42,7 @@ body {
 
 }
 
-.messages {
+.message-area {
     background-color: floralwhite;
     width: 65.3%;
     height: 100%;
@@ -52,6 +52,30 @@ body {
     border-radius: 10px;
     min-height: 50%;
     display: inline-block;
+}
+
+.message {
+    margin: 1rem;
+    border-bottom: 1px solid darkgrey;
+    background-color: cornsilk;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+}
+.message .content {
+    font-size: 1rem;
+    //line-height: 1.5rem;
+    padding: 0.5rem 0;
+}
+.message .time-sent {
+    float: right;
+    font-weight: lighter;
+    font-size: 0.6rem;
+}
+
+.message .username {
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding-bottom: 0.5rem;
 }
 .container > .title {
     background-color: lightsalmon;
@@ -76,19 +100,33 @@ h2 {
 .sidebar {
 
 }
-
+button {
+    font-size: 1rem;
+    color: darkblue;
+    border-radius: 10px;
+    background-color: cornsilk;
+    margin-left: 1rem;
+}
 .rooms {
+    width: 66%;
+    margin-left: 3rem;
+    margin-top: .5rem;
+}
+.room {
     line-height: 2.5rem;
     text-align: left;
-    color: #666;
-    width: 66%;
-    margin: 5px auto;
+    color: darkblue;
+    margin: .5rem auto;
 
+}
+.room:hover {
+    cursor: pointer;
+    color: red;
 }
 .sidebar > .title {
     border-bottom: 1px solid #666;
 }
-.messages > .title {
+.message-area > .title {
     border-bottom: 1px solid #666;
 }
 .clearfix:after,
