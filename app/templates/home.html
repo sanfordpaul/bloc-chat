@@ -1,0 +1,23 @@
+<div class="container" >
+    <h1 class="title">Bloc Chat</h1>
+    <div class="rooms-bar">
+        <h2 class="title">Rooms
+            <span>
+                <button type="button" class="new-room-button" ng-click="home.addRoom()">
+                    New Room
+                </button>
+            </span>
+        </h2>
+        <div class="rooms">
+            <div class="room"  ng-click="home.roomClicked({roomName: room.roomName, roomId: room.$id})" ng-repeat="room in home.rooms"> {{room.roomName}}</div>
+        </div>
+    </div>
+    <div class="message-area">
+        <h2 class="title">Messages for {{home.currentRoom.roomName}}</h2>
+        <div class="message" ng-repeat= "message in home.currentRoomMessages">
+            <p class="content">{{message.content}}</p>
+            <span class="time-sent">sent at {{message.timesent}}</span>
+            <span class="username">{{message.username}}</span>
+        </div>
+    </div>
+</div>

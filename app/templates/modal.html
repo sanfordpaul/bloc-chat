@@ -5,11 +5,11 @@
         <div class="modal-body">
             <form>
                 Room name:<br>
-                <input class="text-input" type="text" name="room-name" value="">
+                <input  type="text" name="input" ng-model="modal.newRoom.roomName">
             </form>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="modal.ok()">OK</button>
+            <button class="btn btn-primary" type="button" ng-click="modal.submit()">OK</button>
             <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
         </div>
 </div>

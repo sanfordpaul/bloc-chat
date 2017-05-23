@@ -31,10 +31,10 @@ body {
 
 }
 
-.sidebar {
-    width: 30%;
+.rooms-bar {
+    width: 32%;
     height: 100%;
-    margin: 1rem;
+    margin: 1rem 2rem 1rem 0;
     background-color: aliceblue;
     float: left;
     border: 3px solid black;
@@ -44,9 +44,9 @@ body {
 
 .message-area {
     background-color: floralwhite;
-    width: 65.3%;
+    width: 66.1%;
     height: 100%;
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 0 1rem 0;
     float: none;
     border: 3px solid black;
     border-radius: 10px;
@@ -55,6 +55,7 @@ body {
 }
 
 .message {
+
     margin: 1rem;
     border-bottom: 1px solid darkgrey;
     background-color: cornsilk;
@@ -62,30 +63,29 @@ body {
     padding: 0.5rem 1rem;
 }
 .message .content {
-    font-size: 1rem;
+    font-size: 2rem;
     //line-height: 1.5rem;
     padding: 0.5rem 0;
 }
 .message .time-sent {
     float: right;
     font-weight: lighter;
-    font-size: 0.6rem;
+    font-size: 1.3rem;
 }
 
 .message .username {
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 1.3rem;
     padding-bottom: 0.5rem;
 }
 .container > .title {
     background-color: lightsalmon;
-    height: 5rem;
-    margin: 1rem 1rem 0 1rem;
-    line-height: 5rem;
-    font-size: 2rem;
+    margin: 1rem 0 0 0;
+    font-size: 3.5rem;
     font-weight: bold;
     border: 3px solid black;
     border-radius: 10px;
+    padding: 1.5rem 0;
 }
 .title {
     text-align: center;
@@ -93,37 +93,38 @@ body {
 
 }
 h2 {
-    height: 3rem;
-    line-height: 3rem;
     font-size: 1.3rem;
 }
-.sidebar {
 
-}
-button {
-    font-size: 1rem;
+.new-room-button {
+    font-size: 1.5rem;
     color: darkblue;
     border-radius: 10px;
     background-color: cornsilk;
     margin-left: 1rem;
+    position: relative;
+    bottom: 0.55rem;
+
 }
 .rooms {
-    width: 66%;
+
     margin-left: 3rem;
     margin-top: .5rem;
+
 }
 .room {
-    line-height: 2.5rem;
+    font-size: 2.5rem;
     text-align: left;
     color: darkblue;
-    margin: .5rem auto;
+    margin: 1.5rem 0;
+
 
 }
 .room:hover {
     cursor: pointer;
     color: red;
 }
-.sidebar > .title {
+.rooms-bar > .title {
     border-bottom: 1px solid #666;
 }
 .message-area > .title {
