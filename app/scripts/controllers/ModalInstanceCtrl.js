@@ -1,20 +1,19 @@
 (function() {
     function ModalInstanceCtrl($uibModalInstance, $document) {
-        var $ctrl = this;
+        var modal = this;
 
-          $ctrl.ok = function () {
+        modal.ok = function () {
             var returnValue = $document.find("input").val();
-            
             $uibModalInstance.close(returnValue);
           };
 
-          $ctrl.cancel = function () {
+        modal.cancel = function () {
             $uibModalInstance.dismiss('cancel');
           };
 
     }
 
     angular
-        .module('ui.bootstrap')
+        .module('blocChat')
         .controller('ModalInstanceCtrl', ['$uibModalInstance', '$document', ModalInstanceCtrl]);
 })();

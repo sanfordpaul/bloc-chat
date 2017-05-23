@@ -2,6 +2,7 @@
     function ModalCtrl($uibModal, Room, $document) {
 
         var $ctrl = this;
+
         $ctrl.newRoom = null;
 
           $ctrl.open = function (size, parentSelector) {
@@ -16,6 +17,7 @@
               controllerAs: '$ctrl',
               size: size,
               appendTo: parentElem,
+              backdrop: 'static',
               resolve: {
                   newRoom: function () {
                       return $ctrl.newRoom;

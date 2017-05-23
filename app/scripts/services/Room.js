@@ -20,7 +20,7 @@
     };
 
     Room.add = function(room) {
-        Room.all.$add(room);
+        Room.all.$add(room);  //{roomName:room}
     };
 
 
