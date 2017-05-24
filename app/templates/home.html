@@ -13,7 +13,8 @@
         </div>
     </div>
     <div class="message-area">
-        <h2 class="title">Messages for {{home.currentRoom.roomName}}</h2>
+        <h2 class="title">Messages for {{home.currentUser.name}}</h2>
+        <h3 class="current-room" >{{home.currentRoom.roomName}}</h3>
         <div class="message" ng-repeat= "message in home.currentRoomMessages">
             <p class="content">{{message.content}}</p>
             <span class="time-sent">sent at {{message.timesent}}</span>
