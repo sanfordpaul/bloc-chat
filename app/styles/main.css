@@ -7,7 +7,7 @@
 html {
     height: 100%;
     font-size: 100%;
-
+    overflow: hidden;
 
 }
 
@@ -25,15 +25,14 @@ body {
 
 .container {
     width: 1024px;
-    height: 800px;
-    margin: 10px auto;
+    margin: 0 auto;
     min-width: 360px;
 
 }
 
 .rooms-bar {
     width: 32%;
-    height: 100%;
+    height: 80vh;
     margin: 1rem 2rem 1rem 0;
     background-color: aliceblue;
     float: left;
@@ -45,13 +44,14 @@ body {
 .message-area {
     background-color: floralwhite;
     width: 66.1%;
-    height: 100%;
+    height: 80vh;
     margin: 1rem 0 1rem 0;
     float: none;
     border: 3px solid black;
     border-radius: 10px;
     min-height: 50%;
     display: inline-block;
+    position: relative;
 }
 
 .message {
@@ -94,6 +94,7 @@ body {
 }
 h2 {
     font-size: 1.3rem;
+    padding-bottom: 1.5rem;
 }
 
 .new-room-button {
@@ -103,7 +104,8 @@ h2 {
     background-color: floralwhite;
     margin-left: 1rem;
     position: relative;
-    bottom: 0.55rem;
+    bottom: 0.35rem;
+
 
 }
 .rooms {
@@ -126,9 +128,38 @@ h2 {
 }
 .rooms-bar > .title {
     border-bottom: 1px solid #666;
+
 }
 .message-area > .title {
     border-bottom: 1px solid #666;
+
+}
+.message-input-area {
+
+    width: 100%;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+.current-time {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+}
+.message-input {
+    width: 85%;
+    display: inline-block;
+    background-color: bisque;
+    margin-left: 1.5rem;
+    border-radius: 10px;
+}
+.send-button {
+    display: inline-block;
+    width: auto;
+    background-color: tan;
+    color: black;
+    border-radius: 10px;
+    margin-left: 1rem;
 }
 .clearfix:after,
 .clearfix:before {

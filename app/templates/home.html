@@ -17,8 +17,19 @@
         <h3 class="current-room" >{{home.currentRoom.roomName}}</h3>
         <div class="message" ng-repeat= "message in home.currentRoomMessages">
             <p class="content">{{message.content}}</p>
-            <span class="time-sent">sent at {{message.timesent}}</span>
-            <span class="username">{{message.username}}</span>
+            <span class="time-sent">sent on {{message.timeSentObject.filtered}}</span>
+            <span class="username">{{message.userName}}</span>
         </div>
+
+        <div class="message-input-area">
+            <div class="current-time">
+                 {{ home.currentDateTime.filtered }}
+            </div>
+            <input class="message-input"  ng-model="home.newMessageContent" type="text" placeholder="Your message here..." autofocus=true>
+            <button class='send-button' type="button" value="Send" ng-click="home.newMessage(home.newMessageContent); home.newMessageContent = '';">Send!</button>
+        </div>
+
     </div>
+
+
 </div>
